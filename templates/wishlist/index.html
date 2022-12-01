@@ -1,0 +1,10 @@
+{% extends "layout/base.html" %}
+
+{% block 'title' %} Lista de Deseos {% endblock  %}
+
+{% block 'content' %}
+    <h1>Mi lista de deseos</h1>
+    {% for wish in wishes %}
+    <li><img src="{{ wish.image }}" alt="{{ wish }}"> | {{ wish }} {{ wish.price }}€ | {{ wish.stock|yesno:'Disponible, Fuera de Stock' }}</li>
+{% endfor %}
+{% endblock  %}
