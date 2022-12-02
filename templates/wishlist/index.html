@@ -4,7 +4,20 @@
 
 {% block 'content' %}
     <h1>Mi lista de deseos</h1>
+    <div class="main">
     {% for wish in wishes %}
-    <li><img src="{{ wish.image }}" alt="{{ wish }}"> | {{ wish }} {{ wish.price }}€ | {{ wish.stock|yesno:'Disponible, Fuera de Stock' }}</li>
+    <li class="list">
+            <a href="#"><img class="btn-del" src="/static/svg/delete.svg" alt=""></a>
+            <img src="{{ wish.image }}" alt="{{ wish }}">
+            <span>{{ wish }}</span>
+            <span>{{ wish.price }}€ | </span>
+            <span>{{ wish.stock|yesno:'Disponible, Fuera de Stock' }}</span>
+            <span>
+                <span>{{ wish.date }}</span>
+                <button class="cart">Añadir al carrito</button>
+            </span>
+    </li>
+    <hr>
+    </div>
 {% endfor %}
 {% endblock  %}
