@@ -174,4 +174,40 @@ hr {
     font-size: small;
     align-items: flex-end;
 }
+
+@keyframes myAnimation{
+    0%{
+        opacity: 1;
+        transform: rotateX(90deg);
+    }
+    50%{
+        opacity: 0.5;
+        transform: rotateX(0deg);
+    }
+    100%{
+        display: none;
+        opacity: 0;
+        transform: rotateX(90deg);
+    }
+}
+
+.messages {
+    display: flex;
+    justify-content: center;
+}
+
+li.alert-success {
+    width: 20%;
+    margin: 15px;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    list-style-type: none;
+    border-radius: 10px;
+    text-align: center;
+    animation-name: myAnimation;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
+}
 /*End Layouts settings */
+

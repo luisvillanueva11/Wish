@@ -15,6 +15,11 @@
         {% block 'content' %}
         {% endblock  %}
     </main>
-    {% block 'script' %}{% endblock  %}
+    {% block 'script' %}
+    <script>
+        var message_ele = document.getElementById("alert-success");
+        setTimeout(function(){message_ele.style.display = "none";}, 3000);
+    </script>
+    {% endblock  %}
 </body>
 </html>

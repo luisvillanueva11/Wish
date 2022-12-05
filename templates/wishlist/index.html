@@ -8,12 +8,19 @@
         <div class="container">
             <a id='create' href="{% url 'create' %}">Nuevo producto</a>
         </div>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} id="alert-success" class="alert-success"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
         {% if wishes|length != 0 %}
             {% for wish in wishes %}
                 <li class="list">
                         <a href="{% url 'delete' id=wish.id %}"><img class="btn-del" src="/static/svg/delete.svg" alt="del"></a>
                         <div class="img-box">
-                            <img src="{{ wish.imagen }}" alt="{{ wish }}">
+                            <img src="{{ wish.image }}" alt="{{ wish }}">
                         </div>
                         <span>{{ wish }}</span>
                         <span>{{ wish.price }}€</span>

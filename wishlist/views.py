@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.contrib import messages
 from .models import Wish
 from .forms import WishForm
 
@@ -22,6 +23,10 @@ def create(request):
         form = WishForm(request.POST)
         if form.is_valid:
             form.save()
+        context = {
+            'form': form
+        }
+        messages.success(request, 'Producto creado correctamente')
         return redirect('wishlist')
 
 def delete(request, id):
