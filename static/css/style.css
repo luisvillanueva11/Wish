@@ -66,12 +66,31 @@ main {
     flex-direction: column;
     width: 95vw;
     margin: 30px;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
 .main {
     margin-top: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#create {
+    padding: 5px 15px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: darkolivegreen;
+    color: white;
+    border-radius: 15px;
+}
+
+#create:hover{
+    background-color: var(--primary-color);
 }
 
 hr {
@@ -93,6 +112,7 @@ hr {
     justify-content: space-around;
     align-items: center;
     color: var(--secundary-color);
+    flex-wrap: wrap;
 }
 
 
@@ -110,9 +130,18 @@ img {
 
 .cart {
     padding: 5px 20px;
-    background: rgb(18, 171, 107);
-    color: black;
+    background: darkolivegreen;
+    color: white;
     border-radius: 15px;
     border: none;
+}
+
+#wrap {
+    justify-content: center;
+}
+
+#fecha {
+    font-size: small;
+    align-items: flex-end;
 }
 /*End Layouts settings */

@@ -1,0 +1,37 @@
+input {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    width: 100%;
+}
+
+.btn-send {
+    width: 78%;
+    background-color: var(--color-primary);
+    color: white;
+    border: 0;
+    padding: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+
+.btn-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.aux-btn-form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.aux-btn-form a {
+    padding-right: 10px;
+    text-decoration: none;
+}

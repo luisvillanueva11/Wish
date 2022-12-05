@@ -5,16 +5,18 @@
 {% block 'content' %}
     <h1>Mi lista de deseos</h1>
     <div class="main">
-        <a href="#">Nuevo producto</a>
+        <div class="container">
+            <a id='create' href="{% url 'create' %}">Nuevo producto</a>
+        </div>
         {% for wish in wishes %}
         <li class="list">
                 <a href="{% url 'delete' id=wish.id %}"><img class="btn-del" src="/static/svg/delete.svg" alt="del"></a>
                 <img src="{{ wish.image }}" alt="{{ wish }}">
                 <span>{{ wish }}</span>
-                <span>{{ wish.price }}€ | </span>
+                <span>{{ wish.price }}€</span>
                 <span>{{ wish.stock|yesno:'Disponible, Fuera de Stock' }}</span>
-                <span>
-                    <span>{{ wish.date }}</span>
+                <span id="wrap">
+                    <span id="fecha">Agregado en: {{ wish.date }}</span>
                     <button class="cart">Añadir al carrito</button>
                 </span>
         </li>

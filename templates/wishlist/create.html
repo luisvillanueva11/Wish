@@ -1,0 +1,21 @@
+{% extends "layout/base.html" %}
+
+{% block 'title' %} Crear tarea {% endblock  %}
+
+{% block 'styles' %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+{% endblock  %}
+
+{% block 'content' %}
+    <span class="aux-btn-form"><a href="{% url 'wishlist' %}">Volver atrás</a></span>
+    <form action='{% url 'create' %}' method='POST'>
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <div class="btn-wrapper">
+            <input class="btn-send" type="submit" value="Guardar">
+        </div>
+    </form>
+{% endblock  %}
