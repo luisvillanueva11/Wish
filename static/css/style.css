@@ -101,16 +101,17 @@ main {
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 #create {
-    padding: 5px 15px;
     text-decoration: none;
+    padding: 10px 20px;
     cursor: pointer;
     background-color: var(--Third-color);
     color: white;
-    border-radius: 15px;
+    border-radius: 10px;
+    height: 38px;
 }
 
 #create:hover{
@@ -175,6 +176,7 @@ hr {
     align-items: flex-end;
 }
 
+
 @keyframes myAnimation{
     0%{
         opacity: 1;
@@ -191,14 +193,9 @@ hr {
     }
 }
 
-.messages {
-    display: flex;
-    justify-content: center;
-}
 
 li.alert-success {
-    width: 20%;
-    margin: 15px;
+    margin-left: 15px;
     padding: 10px;
     background-color: green;
     color: white;

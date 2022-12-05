@@ -7,14 +7,14 @@
     <div class="main">
         <div class="container">
             <a id='create' href="{% url 'create' %}">Nuevo producto</a>
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} id="alert-success" class="alert-success"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
         </div>
-        {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li{% if message.tags %} id="alert-success" class="alert-success"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
         {% if wishes|length != 0 %}
             {% for wish in wishes %}
                 <li class="list">
