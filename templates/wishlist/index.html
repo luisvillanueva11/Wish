@@ -8,19 +8,25 @@
         <div class="container">
             <a id='create' href="{% url 'create' %}">Nuevo producto</a>
         </div>
-        {% for wish in wishes %}
-        <li class="list">
-                <a href="{% url 'delete' id=wish.id %}"><img class="btn-del" src="/static/svg/delete.svg" alt="del"></a>
-                <img src="{{ wish.image }}" alt="{{ wish }}">
-                <span>{{ wish }}</span>
-                <span>{{ wish.price }}€</span>
-                <span>{{ wish.stock|yesno:'Disponible, Fuera de Stock' }}</span>
-                <span id="wrap">
-                    <span id="fecha">Agregado en: {{ wish.date }}</span>
-                    <button class="cart">Añadir al carrito</button>
-                </span>
-        </li>
-        <hr>
+        {% if wishes|length != 0 %}
+            {% for wish in wishes %}
+                <li class="list">
+                        <a href="{% url 'delete' id=wish.id %}"><img class="btn-del" src="/static/svg/delete.svg" alt="del"></a>
+                        <div class="img-box">
+                            <img src="{{ wish.imagen }}" alt="{{ wish }}">
+                        </div>
+                        <span>{{ wish }}</span>
+                        <span>{{ wish.price }}€</span>
+                        <span>{{ wish.stock|yesno:'Disponible, Fuera de Stock' }}</span>
+                        <span id="wrap">
+                            <span id="fecha">Agregado en: {{ wish.date }}</span>
+                            <button class="cart">Añadir al carrito</button>
+                        </span>
+                </li>
+                <hr>
+            {% endfor %}
+        {% else %}
+            <h2 class="empty-txt">Aun no has agregado productos a tu lista de deseos</h2>
+        {% endif %}
     </div>
-{% endfor %}
 {% endblock  %}

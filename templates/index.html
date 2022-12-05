@@ -4,4 +4,8 @@
 
 {% block 'content' %}  
     <h1>Inicio</h1>
+    <div class="cards">
+        <a class="card" href="{% url 'wishlist' %}">Lista de deseos</a>
+        <a class="card" href="{% url 'create' %}">Añadir productos</a>
+    </div>
 {% endblock  %}
