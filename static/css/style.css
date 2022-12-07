@@ -100,8 +100,10 @@ main {
 }
 
 .container {
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 25% 40% 35%;
+    column-gap: 50px;
+    justify-items: center;
 }
 
 #create {
@@ -112,6 +114,7 @@ main {
     color: white;
     border-radius: 10px;
     height: 38px;
+    margin-left: au;
 }
 
 #create:hover{

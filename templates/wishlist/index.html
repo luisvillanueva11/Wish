@@ -6,11 +6,12 @@
     <h1>Mi lista de deseos</h1>
     <div class="main">
         <div class="container">
+            <div> </div>
             <a id='create' href="{% url 'create' %}">Nuevo producto</a>
             {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
-                <li{% if message.tags %} id="alert-success" class="alert-success"{% endif %}>{{ message }}</li>
+                <li{% if message.tags %} id="alert-success" class="alert-success"{% endif %}>{{ message }} </li>
                 {% endfor %}
             </ul>
             {% endif %}
