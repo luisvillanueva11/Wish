@@ -43,6 +43,15 @@ input {
 }
 
 .aux-btn-form a {
-    padding-right: 10px;
+    padding: 2px 10px;
     text-decoration: none;
+    color: white;
+    background-color: var(--third-color);
+    border-radius: 10px;
+
+}
+
+.aux-btn-form a:hover {
+    background-color: var(--secundary-color);
+    
 }

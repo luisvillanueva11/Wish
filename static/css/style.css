@@ -1,7 +1,7 @@
 :root {
     --primary-color: slategray;
     --secundary-color: rgb(31, 31, 31);
-    --Third-color: darkolivegreen;
+    --third-color: darkolivegreen;
     --font-main: Roboto-bold;
     --font-text: Roboto-regular;
 
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     color: white;
     border-radius: 20px;
-    background-color: var(--Third-color);
+    background-color: var(--third-color);
     text-decoration: none;
 }
 
@@ -110,7 +110,7 @@ main {
     text-decoration: none;
     padding: 10px 20px;
     cursor: pointer;
-    background-color: var(--Third-color);
+    background-color: var(--third-color);
     color: white;
     border-radius: 10px;
     height: 38px;
@@ -158,7 +158,7 @@ hr {
 
 .cart {
     padding: 5px 20px;
-    background: var(--Third-color);
+    background: var(--third-color);
     color: white;
     border-radius: 15px;
     border: none;
@@ -171,11 +171,13 @@ hr {
 }
 
 #wrap {
-    justify-content: center;
+    display: grid;
+    align-content: center;
+    justify-items: center;
 }
 
 #fecha {
-    font-size: small;
+    font-size: x-small;
     align-items: flex-end;
 }
 
