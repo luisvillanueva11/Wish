@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 20vw;
+    width: 50vw;
 }
 
 input {
@@ -11,7 +12,7 @@ input {
     border: 1px solid black;
     border-radius: 8px;
     padding: 5px;
-    width: 100%;
+    width: 300px
 }
 
 .btn-send {
