@@ -21,7 +21,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "/wish/wsgi.py"
+        "dest": "wish/wsgi.py"
       }
     ]
   }
