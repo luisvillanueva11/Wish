@@ -2,9 +2,9 @@
     "version": 2,
     "builds": [
       {
-        "src": "/wish/wsgi.py",
-        "use": "@ardnt/vercel-python-wsgi",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.10.8" }
+        "src": "wish/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
       },
       {
         "src": "build_files.sh",
