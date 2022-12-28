@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'wish.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'wish',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'pgadmin',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'PASSWORD': 'MR6lIDJD9QlIfooho464',
+        'HOST': 'containers-us-west-171.railway.app',
+        'PORT': '6498',
     }
 }
 
